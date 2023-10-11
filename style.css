@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.cursor {
+  position: absolute;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  z-index: 99;
+  display: none;
+  transition: all linear 0.2s;
+  border: 2px solid black;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: canopee;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.back {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.back img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.top {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 8rem;
+}
+.logo img {
+  height: 60px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.navSide {
+  display: flex;
+  gap: 2rem;
+}
+.hero {
+  height: calc(100vh - 100px);
+  padding: 0 2rem 0 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  height: inherit;
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.left .elem h1 {
+  font-family: canopee;
+  letter-spacing: -2px;
+  font-weight: 900;
+  font-size: 7rem;
+}
+button {
+  height: 6vh;
+  font-family: canopee;
+  width: 10vw;
+  font-size: 1.3rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px solid black;
+  transition: all ease 0.8s;
+}
+button:hover {
+  height: 6vh;
+  font-family: canopee;
+  width: 10vw;
+  font-size: 1.3rem;
+  font-weight: 400;
+  background-color: white;
+  border: 2px solid black;
+  scale: 1.1;
+}
+.right {
+  height: inherit;
+  width: 25%;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.right :nth-child(3) {
+  margin-bottom: 8vh;
+}
+.imgdiv {
+  height: 30vh;
+  width: 30vh;
+  background-image: url(https://images.pexels.com/photos/15616556/pexels-photo-15616556/free-photo-of-photo-of-an-attractive-woman-wearing-sunglasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  border: 1px solid black;
+  background-position: center;
+}
+p {
+  font-family: canopee;
+  font-size: 1.1rem;
+}
+/* ................................................................................. */
+@media (max-width: 550px) {
+  html,
+  body {
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+  .cursor {
+    display: none;
+  }
+  .top {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .logo img {
+    height: 60px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .navSide {
+    display: none;
+    gap: 2rem;
+  }
+  .hero {
+    height: calc(100vh - 100px);
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .left {
+    height: inherit;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .left .elem h1 {
+    font-family: canopee;
+    letter-spacing: -2px;
+    font-weight: 900;
+    font-size: 6rem;
+  }
+  button {
+    height: 6vh;
+    font-family: canopee;
+    width: 50vw;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: transparent;
+    border: 2px solid black;
+    transition: all ease 0.8s;
+  }
+  button:hover {
+    height: 6vh;
+    font-family: canopee;
+    width: 10vw;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: white;
+    border: 2px solid black;
+    scale: 1.1;
+  }
+  .right {
+    display: none;
+  }
+}
